@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello</title>
+</head>
+<body>
+    <h1>Hello, World</h1>
+    <script>
+        const students = [];
+    let option = prompt(`Enter your option:`);
+
+    while (option !== 'Exit') {
+        if (option === 'C') {
+            const name = prompt("Enter student name:");
+            students.push(name);
+        } else if (option === 'R') {
+            const index = prompt("Enter index of student:");
+            if (index < 0 || index >= students.length) {
+                alert("Invalid index="+index);
+                break;
+            }
+            alert("Student name: " + students[index]);
+        } else if (option === 'U') {
+            const index = prompt("Enter index of student:");
+            if (index < 0 || index >= students.length) {
+                alert("Invalid index=" + index);
+                break;
+            }
+            const name = prompt("Enter student name:");
+            students[index] = name;
+            alert("Updated student index="+index);
+        } else {
+            const index = prompt("Enter index of student:");
+            if (index < 0 || index >= students.length) {
+                alert("Invalid index=" + index);
+                break;
+            }
+            delete students[index];
+            alert("Deleted student index=" + index);
+        }
+    }      
+    </script>
+</body>
+</html>
