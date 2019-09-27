@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello</title>
+</head>
+<body>
+    <h1>Hello, World</h1>
+    <script>
+        let student = [];
+        let studentIndex;
+        while(true)
+        {
+            let operation = prompt(`Enter your operation (C/R/U/D/Exit):`);
+            if(operation == "Exit")
+            {
+                break;
+            }
+            switch(operation)
+            {
+                case 'C':
+                let newStudent = prompt("Enter student name:");
+                student.push(newStudent);
+                break;
+                case 'R':
+                studentIndex = prompt("Enter student index:");
+                studentIndex = Number(studentIndex);
+                console.log(student[studentIndex - 1]);
+                break;
+                case 'U':
+                studentIndex = prompt("Enter student index:");
+                studentIndex = Number(studentIndex);
+                console.log(student[studentIndex - 1]);
+                let newName = prompt("Enter new student name:");
+                student[studentIndex - 1] = newName;
+                break;
+                case 'D':
+                studentIndex = prompt("Enter student index:");
+                student.splice(studentIndex - 1, 1);
+                break;
+                default:
+                    console.log("Wrong Input");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
