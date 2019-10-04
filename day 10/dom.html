@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=,, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <ul class = "a" id="1">
+                <li class = "b" id="2">Pham Bao Ngoc</li>
+                <li class = "c" id="3">Nguyen Van Dong</li>
+                <li class = "d" id="4">Dang Duy</li>
+        </ul> 
+        <ul>
+            <li>A</li>
+            <li>B</li>
+        </ul>
+        <script>
+                let phuongThuc = prompt("Nhap vao phuong thuc:");
+                switch(phuongThuc)
+                {
+                case "C": 
+                let c = document.querySelector('ul');
+                let b = document.createElement('li');
+                b.textContent = 'Nguyen Van Sang';
+                c.appendChild(b);
+                case "R":
+                document.getElementById("1");
+                document.getElementById("2");
+                document.getElementById("3");
+                case "U": 
+                {
+                document.getElementById("1").innerHTML="Nguyen Minh Hieu";
+                document.getElementById("2").innerHTML="Le Van Loi";
+                document.getElementById("3").innerHTML="Dinh Hinh";
+                }
+                case "D": 
+                let a = document.getElementsByTagName("li");
+                a[0].remove();
+                }
+        </script>
+</body>
+</html>
