@@ -12,32 +12,27 @@
                 <li class = "c" id="3">Nguyen Van Dong</li>
                 <li class = "d" id="4">Dang Duy</li>
         </ul> 
-        <ul>
-            <li>A</li>
-            <li>B</li>
-        </ul>
         <script>
                 let phuongThuc = prompt("Nhap vao phuong thuc:");
-                switch(phuongThuc)
+                if(phuongThuc === "C")
                 {
-                case "C": 
                 let c = document.querySelector('ul');
                 let b = document.createElement('li');
                 b.textContent = 'Nguyen Van Sang';
                 c.appendChild(b);
-                case "R":
-                document.getElementById("1");
+                } else if(phuongThuc === "R")
+                {
                 document.getElementById("2");
                 document.getElementById("3");
-                case "U": 
+                document.getElementById("4");
+                } else if(phuongThuc === "U")
                 {
-                document.getElementById("1").innerHTML="Nguyen Minh Hieu";
-                document.getElementById("2").innerHTML="Le Van Loi";
-                document.getElementById("3").innerHTML="Dinh Hinh";
-                }
-                case "D": 
+                document.getElementById("2").innerHTML="Nguyen Minh Hieu";
+                document.getElementById("3").innerHTML="Le Van Loi";
+                document.getElementById("4").innerHTML="Dinh Hinh";
+                } else{
                 let a = document.getElementsByTagName("li");
-                a[0].remove();
+                a[1].remove();
                 }
         </script>
 </body>
