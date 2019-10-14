@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Asychronous</title>
+</head>
+<body>
+    <script>
+    let bienCuaToi = prompt("Nhap vao bien");
+    function kiemtra(bienCuaToi)
+    {
+        let newPromise = new Promise(function(resolve,reject){
+        if(isNaN(bienCuaToi) == true)
+        {
+            resolve(bienCuaToi);
+        }
+        else
+        {
+            reject("Not a string");
+        }
+    })
+    return newPromise;
+    }
+    function soMot()
+    {
+       kiemtra(bienCuaToi).then(function(){
+            console.log(bienCuaToi);
+        }).catch(function(){
+            console.log("Not a String");
+        })
+    }
+    async function soHai()
+    {
+        try{
+            let a = await kiemtra(bienCuaToi);
+            console.log(a);
+        }
+        catch(err){
+            console.log(err);
+        }
+    }
+    soHai();
+    soMot();
+    </script>
+</body>
+</html>
